@@ -1,6 +1,8 @@
 name: CI FastAPI
 
 on:
+  workflow_dispatch:
+
 
   pull_request:
 
@@ -15,7 +17,7 @@ jobs:
 
   pytest:
     name: Unit Testing
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
